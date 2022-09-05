@@ -1,0 +1,288 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*  Write your code here. */
+
+/* Delete this ruleset. */
+
+nav.toolbar {
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #6e072d;
+  color: white;
+  font-size: 18px;
+}
+
+.toolbar ul {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+}
+
+.toolbar li {
+  list-style-type: none;
+  padding: 1em 1.5em;
+  cursor: pointer;
+}
+.toolbar a {
+  text-decoration: none;
+  color: white;
+}
+li:not(:first-of-type) {
+  border-left: 2px solid white;
+}
+.toolbar li:not {
+  border-left: 2px solid white;
+}
+/* .graph-list {
+  border-right: 2px solid white;
+} */
+.contact {
+  border-left: 2px solid white;
+}
+
+/* li:first-of-type {
+} */
+
+.toolbar li:hover {
+  background-color: #b90e4d;
+}
+body {
+  background-color: grey;
+}
+/******************** Graph List ****************/
+/* By adding overflow: scroll/auto we can add scroll to the content and 
+content will not over flow out of the parent container */
+.graph-list-container {
+  /* background-color: grey; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  border-radius: 12px;
+  padding: 10px;
+  min-height: 50vh;
+  /* overflow: auto; */
+  margin: 24px;
+}
+.graph-list-container h1 {
+  margin-top: 0;
+}
+
+.graph-container {
+  margin: 10px 0;
+  height: 500px;
+  overflow-y: scroll;
+  width: 50%;
+  padding: 0 20px;
+}
+
+/* display: flex is important property
+it shows the content in column by default
+it allows us to add justify-content: space-between property by which we can place the content on at most left and right
+*/
+.graph-list-container li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  background-color: #00557f;
+  border-radius: 5px;
+  padding: 0 12px;
+  margin: 5px;
+  color: white;
+  width: 100%;
+}
+
+.graph-container ul {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+}
+/*Background: none removes the background from the property and show a transparent button
+transition property allows to show button in slower than the expected thus here 0.5 transition allow us to show the button slowly by that much seconds.
+*/
+.graph-container button.delete-button {
+  border-radius: 4px;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.5s;
+  color: black;
+  font-size: 20px;
+  border-color: white;
+  background-color: lightgrey;
+}
+
+/* .graph-container button.delete-button:hover {
+  border-color: white;
+  transform: scale(1.5);
+} */
+
+.graph-list-container input {
+  width: 50%;
+  font-size: 24px;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+#add-button {
+  font-size: 24px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: lightgrey;
+}
+
+.graph-container h2 a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.graph-container h2 a:hover {
+  color: lightgrey;
+}
+
+/******************** Graph List ****************/
+
+.create-graph-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 24px;
+  grid-template-areas:
+    "title title"
+    "input create"
+    "msg msg";
+
+  font-size: 24px;
+  gap: 12px;
+  /* height: 500px; */
+}
+
+.create-graph-container h2 {
+  grid-area: title;
+  text-align: center;
+  margin-bottom: 24px;
+  padding: 8px;
+  border-radius: 4px;
+  color: white;
+}
+.create-graph-container label {
+  grid-area: label;
+  margin-right: 12px;
+}
+.create-graph-container p {
+  grid-area: msg;
+  padding: 12px;
+  background-color: lightgreen;
+}
+.create-graph-container input {
+  grid-area: input;
+  font-size: 24px;
+  padding: 8px;
+  border-radius: 10px;
+}
+.create-graph-container button {
+  grid-area: create;
+  font-size: 24px;
+  background-color: #02203c;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 8px;
+}
+.create-graph-container button {
+  grid-area: create;
+  font-size: 24px;
+  background-color: #02203c;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 8px;
+}
+.create-graph-container button:disabled {
+  opacity: 0.5;
+}
+
+.graph-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 24px;
+  padding: 10px;
+}
+
+.graph-view div div {
+  width: 600px;
+  height: 500px;
+  background-color: #a9a6a6;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 4%;
+}
+.graph-view div div > svg {
+  background-color: #a9a6a6;
+  margin: 10px;
+  padding: 10px;
+}
+.graph-view div h1 {
+  text-align: center;
+  color: white;
+  margin-top: 0;
+}
+.graph-view button a {
+  color: black;
+  text-decoration: none;
+}
+
+.graph-view button {
+  width: 150px;
+  font-size: 24px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: lightgrey;
+}

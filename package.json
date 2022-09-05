@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "lerna": "^5.5.0"
+  },
+  "name": "graph-demo",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "lerna run start",
+    "new-version": "lerna version --conventional-commits --yes",
+    "install": "npm config set legacy-peer-deps true && npx lerna bootstrap --hoist",
+    "clean": "npx lerna clean  -y"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
