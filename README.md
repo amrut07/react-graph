@@ -1,3 +1,10 @@
+# Development Reference: 
+
+<img width="1434" alt="Screenshot 2022-09-06 at 3 16 02 AM" src="https://user-images.githubusercontent.com/9687524/188515426-554bbba8-a9f8-4bec-a7cf-5be10f40cfa0.png">
+
+<img width="1435" alt="Screenshot 2022-09-06 at 3 18 09 AM" src="https://user-images.githubusercontent.com/9687524/188515440-2dc3d5f3-279f-442f-a592-7381831b17d8.png">
+
+
 # Getting Started The Graph Repo
 
 ### Steps to run the project:
